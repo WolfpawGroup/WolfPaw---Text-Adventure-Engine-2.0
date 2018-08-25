@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WolfPaw___Text_Adventure_Engine_2._0
+namespace WolfPaw_Text_Adventure_Engine_2
 {
 	static class Program
 	{
