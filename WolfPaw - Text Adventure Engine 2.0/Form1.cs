@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -51,8 +50,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 
 		public void loadDataToLvMaps()
 		{
-			local_dbDataSetTableAdapters.dt_table_mapsTableAdapter ta = new local_dbDataSetTableAdapters.dt_table_mapsTableAdapter();
-			var v = ta.GetData();
+
 			foreach(var vv in v)
 			{
 				ListViewItem map = new ListViewItem();

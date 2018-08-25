@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 
 namespace WolfPaw_Text_Adventure_Engine_2
 {
 	public class c_GenerateId
 	{
-		public Properties.ds_DataTableAdapters.TableAdapterManager aman { get; set; }
 
-		public c_GenerateId(Properties.ds_DataTableAdapters.TableAdapterManager _aman)
+		public c_GenerateId()
 		{
-			aman = _aman;
-			aman.get_current_idsTableAdapter = new Properties.ds_DataTableAdapters.get_current_idsTableAdapter();
+
 		}
 
 		private  Dictionary<string, int> types = new Dictionary<string, int>()
@@ -86,14 +83,9 @@ namespace WolfPaw_Text_Adventure_Engine_2
 
 		public  bool hasIdRows()
 		{
-			
-			
-
 			try
 			{
-				string sqlstr = ("SELECT count(*) FROM s_public.dt_table_current_ids");
-				SqlCommand cmd = new SqlCommand(sqlstr);
-				return ((int)cmd.ExecuteScalar()) > 0;
+				return false;
 			}
 			catch
 			{
@@ -103,8 +95,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 
 		public  void initializeIds()
 		{//Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\local_db.mdf;Integrated Security=True
-			aman.get_current_idsTableAdapter = new Properties.ds_DataTableAdapters.get_current_idsTableAdapter();
-			aman.get_current_idsTableAdapter.initialize_ids();
+			
 		}
 
 		//-----------------------------------------------------------------------------------------------------
@@ -113,8 +104,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 		{
 			string id = "";
 
-			Properties.ds_Data.get_current_idsDataTable dat = aman.get_current_idsTableAdapter.GetData();
-			id = dat[1].map_id.ToString().PadLeft(7, '0');
+			
 
 			return id;
 		}
@@ -123,8 +113,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 		{
 			string id = "";
 
-			Properties.ds_Data.get_current_idsDataTable dat = aman.get_current_idsTableAdapter.GetData();
-			id = dat[1].room_id.ToString().PadLeft(7, '0');
+			
 
 			return id;
 		}
@@ -132,9 +121,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 		private  string getCurrentDoorId()
 		{
 			string id = "";
-
-			Properties.ds_Data.get_current_idsDataTable dat = aman.get_current_idsTableAdapter.GetData();
-			id = dat[1].door_id.ToString().PadLeft(7, '0');
+			
 
 			return id;
 		}
@@ -142,9 +129,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 		private  string getCurrentWindowId()
 		{
 			string id = "";
-
-			Properties.ds_Data.get_current_idsDataTable dat = aman.get_current_idsTableAdapter.GetData();
-			id = dat[1].window_id.ToString().PadLeft(7, '0');
+			
 
 			return id;
 		}
@@ -152,9 +137,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 		private  string getCurrentObjectId()
 		{
 			string id = "";
-
-			Properties.ds_Data.get_current_idsDataTable dat = aman.get_current_idsTableAdapter.GetData();
-			id = dat[1].object_id.ToString().PadLeft(7, '0');
+			
 
 			return id;
 		}
@@ -164,9 +147,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 		private  string getNextMapId()
 		{
 			string id = "";
-
-			Properties.ds_Data.get_current_idsDataTable dat = aman.get_current_idsTableAdapter.GetData();
-			id = (dat[1].map_id + 1).ToString().PadLeft(7, '0');
+			
 
 			return id;
 		}
@@ -174,9 +155,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 		private  string getNextRoomId()
 		{
 			string id = "";
-
-			Properties.ds_Data.get_current_idsDataTable dat = aman.get_current_idsTableAdapter.GetData();
-			id = (dat[1].room_id + 1).ToString().PadLeft(7, '0');
+			
 
 			return id;
 		}
@@ -184,9 +163,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 		private  string getNextDoorId()
 		{
 			string id = "";
-
-			Properties.ds_Data.get_current_idsDataTable dat = aman.get_current_idsTableAdapter.GetData();
-			id = (dat[1].door_id + 1).ToString().PadLeft(7, '0');
+			
 
 			return id;
 		}
@@ -194,9 +171,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 		private  string getNextWindowId()
 		{
 			string id = "";
-
-			Properties.ds_Data.get_current_idsDataTable dat = aman.get_current_idsTableAdapter.GetData();
-			id = (dat[1].window_id + 1).ToString().PadLeft(7, '0');
+			
 
 			return id;
 		}
@@ -204,9 +179,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 		private  string getNextObjectId()
 		{
 			string id = "";
-
-			Properties.ds_Data.get_current_idsDataTable dat = aman.get_current_idsTableAdapter.GetData();
-			id = (dat[1].object_id + 1).ToString().PadLeft(7, '0');
+			
 
 			return id;
 		}
