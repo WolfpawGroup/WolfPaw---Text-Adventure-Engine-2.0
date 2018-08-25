@@ -46,6 +46,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -61,10 +64,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="c_GenerateId.cs" />
+    <Compile Include="c_Objects.cs" />
+    <Compile Include="c_Project.cs" />
     <Compile Include="c_SimpleJSON.cs" />
     <Compile Include="c_Map.cs" />
     <Compile Include="c_Object.cs" />
     <Compile Include="c_Room.cs" />
+    <Compile Include="c_WindowHandler.cs" />
+    <Compile Include="c_XML.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +94,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
