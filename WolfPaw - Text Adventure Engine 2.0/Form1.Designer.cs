@@ -32,15 +32,19 @@
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-			this.btn_TS_AddMap = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.tc_Tabs = new System.Windows.Forms.TabControl();
 			this.tp_Maps = new System.Windows.Forms.TabPage();
+			this.btn_Maps_Delete = new System.Windows.Forms.Button();
+			this.btn_Maps_Edit = new System.Windows.Forms.Button();
+			this.btn_Maps_Add = new System.Windows.Forms.Button();
+			this.lv_Maps_List = new System.Windows.Forms.ListView();
+			this.ch_Maps_Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.ch_Maps_MapName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.tabPage3 = new System.Windows.Forms.TabPage();
+			this.tabPage5 = new System.Windows.Forms.TabPage();
+			this.tabPage6 = new System.Windows.Forms.TabPage();
 			this.p_Maps_Add_Panel = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.num_Maps_Add_Height = new System.Windows.Forms.NumericUpDown();
@@ -52,17 +56,13 @@
 			this.lbl_Maps_Add_ID = new System.Windows.Forms.Label();
 			this.btn_Maps_Add_Cancel = new System.Windows.Forms.Button();
 			this.btn_Maps_Add_OK = new System.Windows.Forms.Button();
-			this.btn_Maps_Delete = new System.Windows.Forms.Button();
-			this.btn_Maps_Edit = new System.Windows.Forms.Button();
-			this.btn_Maps_Add = new System.Windows.Forms.Button();
 			this.pb_Maps_Minimap = new System.Windows.Forms.PictureBox();
-			this.lv_Maps_List = new System.Windows.Forms.ListView();
-			this.ch_Maps_Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.ch_Maps_MapName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.tabPage3 = new System.Windows.Forms.TabPage();
-			this.tabPage5 = new System.Windows.Forms.TabPage();
-			this.tabPage6 = new System.Windows.Forms.TabPage();
+			this.btn_TS_AddMap = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel2.SuspendLayout();
@@ -111,60 +111,6 @@
 			this.toolStrip1.TabIndex = 2;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
-			// btn_TS_AddMap
-			// 
-			this.btn_TS_AddMap.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.btn_TS_AddMap.Image = ((System.Drawing.Image)(resources.GetObject("btn_TS_AddMap.Image")));
-			this.btn_TS_AddMap.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btn_TS_AddMap.Name = "btn_TS_AddMap";
-			this.btn_TS_AddMap.Size = new System.Drawing.Size(23, 22);
-			this.btn_TS_AddMap.Text = "Add Map";
-			// 
-			// toolStripButton2
-			// 
-			this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-			this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton2.Name = "toolStripButton2";
-			this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton2.Text = "toolStripButton2";
-			// 
-			// toolStripButton3
-			// 
-			this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-			this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton3.Name = "toolStripButton3";
-			this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton3.Text = "toolStripButton3";
-			// 
-			// toolStripButton4
-			// 
-			this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-			this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton4.Name = "toolStripButton4";
-			this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton4.Text = "toolStripButton4";
-			// 
-			// toolStripButton5
-			// 
-			this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-			this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton5.Name = "toolStripButton5";
-			this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton5.Text = "toolStripButton5";
-			// 
-			// toolStripButton6
-			// 
-			this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-			this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton6.Name = "toolStripButton6";
-			this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton6.Text = "toolStripButton6";
-			// 
 			// splitContainer1
 			// 
 			this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -209,6 +155,114 @@
 			this.tp_Maps.Text = "Maps";
 			this.tp_Maps.UseVisualStyleBackColor = true;
 			// 
+			// btn_Maps_Delete
+			// 
+			this.btn_Maps_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btn_Maps_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btn_Maps_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_Maps_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.btn_Maps_Delete.Location = new System.Drawing.Point(122, 473);
+			this.btn_Maps_Delete.Name = "btn_Maps_Delete";
+			this.btn_Maps_Delete.Size = new System.Drawing.Size(49, 36);
+			this.btn_Maps_Delete.TabIndex = 4;
+			this.btn_Maps_Delete.Text = "-";
+			this.btn_Maps_Delete.UseVisualStyleBackColor = true;
+			// 
+			// btn_Maps_Edit
+			// 
+			this.btn_Maps_Edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btn_Maps_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btn_Maps_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_Maps_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.btn_Maps_Edit.Location = new System.Drawing.Point(48, 473);
+			this.btn_Maps_Edit.Margin = new System.Windows.Forms.Padding(0);
+			this.btn_Maps_Edit.Name = "btn_Maps_Edit";
+			this.btn_Maps_Edit.Size = new System.Drawing.Size(76, 36);
+			this.btn_Maps_Edit.TabIndex = 3;
+			this.btn_Maps_Edit.Text = "EDIT";
+			this.btn_Maps_Edit.UseVisualStyleBackColor = true;
+			// 
+			// btn_Maps_Add
+			// 
+			this.btn_Maps_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btn_Maps_Add.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btn_Maps_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_Maps_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.btn_Maps_Add.Location = new System.Drawing.Point(0, 473);
+			this.btn_Maps_Add.Name = "btn_Maps_Add";
+			this.btn_Maps_Add.Size = new System.Drawing.Size(49, 36);
+			this.btn_Maps_Add.TabIndex = 2;
+			this.btn_Maps_Add.Text = "+";
+			this.btn_Maps_Add.UseVisualStyleBackColor = true;
+			this.btn_Maps_Add.Click += new System.EventHandler(this.btn_Maps_Add_Click);
+			// 
+			// lv_Maps_List
+			// 
+			this.lv_Maps_List.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+			this.lv_Maps_List.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ch_Maps_Id,
+            this.ch_Maps_MapName});
+			this.lv_Maps_List.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.lv_Maps_List.FullRowSelect = true;
+			this.lv_Maps_List.GridLines = true;
+			this.lv_Maps_List.Location = new System.Drawing.Point(0, 0);
+			this.lv_Maps_List.Name = "lv_Maps_List";
+			this.lv_Maps_List.Size = new System.Drawing.Size(171, 474);
+			this.lv_Maps_List.TabIndex = 0;
+			this.lv_Maps_List.UseCompatibleStateImageBehavior = false;
+			this.lv_Maps_List.View = System.Windows.Forms.View.List;
+			// 
+			// ch_Maps_Id
+			// 
+			this.ch_Maps_Id.Text = "#";
+			this.ch_Maps_Id.Width = 34;
+			// 
+			// ch_Maps_MapName
+			// 
+			this.ch_Maps_MapName.Text = "Map";
+			this.ch_Maps_MapName.Width = 133;
+			// 
+			// tabPage2
+			// 
+			this.tabPage2.Location = new System.Drawing.Point(4, 22);
+			this.tabPage2.Name = "tabPage2";
+			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage2.Size = new System.Drawing.Size(830, 509);
+			this.tabPage2.TabIndex = 1;
+			this.tabPage2.Text = "Rooms";
+			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// tabPage3
+			// 
+			this.tabPage3.Location = new System.Drawing.Point(4, 22);
+			this.tabPage3.Name = "tabPage3";
+			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage3.Size = new System.Drawing.Size(830, 509);
+			this.tabPage3.TabIndex = 2;
+			this.tabPage3.Text = "Items";
+			this.tabPage3.UseVisualStyleBackColor = true;
+			// 
+			// tabPage5
+			// 
+			this.tabPage5.Location = new System.Drawing.Point(4, 22);
+			this.tabPage5.Name = "tabPage5";
+			this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage5.Size = new System.Drawing.Size(830, 509);
+			this.tabPage5.TabIndex = 4;
+			this.tabPage5.Text = "Properties";
+			this.tabPage5.UseVisualStyleBackColor = true;
+			// 
+			// tabPage6
+			// 
+			this.tabPage6.Location = new System.Drawing.Point(4, 22);
+			this.tabPage6.Name = "tabPage6";
+			this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage6.Size = new System.Drawing.Size(830, 509);
+			this.tabPage6.TabIndex = 5;
+			this.tabPage6.Text = "tabPage6";
+			this.tabPage6.UseVisualStyleBackColor = true;
+			// 
 			// p_Maps_Add_Panel
 			// 
 			this.p_Maps_Add_Panel.BackColor = System.Drawing.Color.Gainsboro;
@@ -224,11 +278,12 @@
 			this.p_Maps_Add_Panel.Controls.Add(this.lbl_Maps_Add_ID);
 			this.p_Maps_Add_Panel.Controls.Add(this.btn_Maps_Add_Cancel);
 			this.p_Maps_Add_Panel.Controls.Add(this.btn_Maps_Add_OK);
-			this.p_Maps_Add_Panel.Location = new System.Drawing.Point(140, 131);
+			this.p_Maps_Add_Panel.Location = new System.Drawing.Point(-100, -100);
 			this.p_Maps_Add_Panel.Name = "p_Maps_Add_Panel";
-			this.p_Maps_Add_Panel.Size = new System.Drawing.Size(330, 170);
+			this.p_Maps_Add_Panel.Size = new System.Drawing.Size(0, 0);
 			this.p_Maps_Add_Panel.TabIndex = 5;
 			this.p_Maps_Add_Panel.Tag = "{\"W\":\"330\", \"H\":\"170\", \"L\":\"140\", \"T\":\"130\"}";
+			this.p_Maps_Add_Panel.Visible = false;
 			// 
 			// label1
 			// 
@@ -309,6 +364,7 @@
 			this.btn_Maps_Add_Cancel.TabIndex = 2;
 			this.btn_Maps_Add_Cancel.Text = "CANCEL";
 			this.btn_Maps_Add_Cancel.UseVisualStyleBackColor = false;
+			this.btn_Maps_Add_Cancel.Click += new System.EventHandler(this.btn_Maps_Add_Cancel_Click);
 			// 
 			// btn_Maps_Add_OK
 			// 
@@ -320,47 +376,7 @@
 			this.btn_Maps_Add_OK.TabIndex = 1;
 			this.btn_Maps_Add_OK.Text = "OK";
 			this.btn_Maps_Add_OK.UseVisualStyleBackColor = false;
-			// 
-			// btn_Maps_Delete
-			// 
-			this.btn_Maps_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btn_Maps_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btn_Maps_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn_Maps_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.btn_Maps_Delete.Location = new System.Drawing.Point(122, 473);
-			this.btn_Maps_Delete.Name = "btn_Maps_Delete";
-			this.btn_Maps_Delete.Size = new System.Drawing.Size(49, 36);
-			this.btn_Maps_Delete.TabIndex = 4;
-			this.btn_Maps_Delete.Text = "-";
-			this.btn_Maps_Delete.UseVisualStyleBackColor = true;
-			// 
-			// btn_Maps_Edit
-			// 
-			this.btn_Maps_Edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btn_Maps_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btn_Maps_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn_Maps_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.btn_Maps_Edit.Location = new System.Drawing.Point(48, 473);
-			this.btn_Maps_Edit.Margin = new System.Windows.Forms.Padding(0);
-			this.btn_Maps_Edit.Name = "btn_Maps_Edit";
-			this.btn_Maps_Edit.Size = new System.Drawing.Size(76, 36);
-			this.btn_Maps_Edit.TabIndex = 3;
-			this.btn_Maps_Edit.Text = "EDIT";
-			this.btn_Maps_Edit.UseVisualStyleBackColor = true;
-			// 
-			// btn_Maps_Add
-			// 
-			this.btn_Maps_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btn_Maps_Add.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btn_Maps_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn_Maps_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.btn_Maps_Add.Location = new System.Drawing.Point(0, 473);
-			this.btn_Maps_Add.Name = "btn_Maps_Add";
-			this.btn_Maps_Add.Size = new System.Drawing.Size(49, 36);
-			this.btn_Maps_Add.TabIndex = 2;
-			this.btn_Maps_Add.Text = "+";
-			this.btn_Maps_Add.UseVisualStyleBackColor = true;
-			this.btn_Maps_Add.Click += new System.EventHandler(this.btn_Maps_Add_Click);
+			this.btn_Maps_Add_OK.Click += new System.EventHandler(this.btn_Maps_Add_OK_Click);
 			// 
 			// pb_Maps_Minimap
 			// 
@@ -373,72 +389,59 @@
 			this.pb_Maps_Minimap.TabIndex = 1;
 			this.pb_Maps_Minimap.TabStop = false;
 			// 
-			// lv_Maps_List
+			// btn_TS_AddMap
 			// 
-			this.lv_Maps_List.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-			this.lv_Maps_List.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ch_Maps_Id,
-            this.ch_Maps_MapName});
-			this.lv_Maps_List.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.lv_Maps_List.FullRowSelect = true;
-			this.lv_Maps_List.GridLines = true;
-			this.lv_Maps_List.Location = new System.Drawing.Point(0, 0);
-			this.lv_Maps_List.Name = "lv_Maps_List";
-			this.lv_Maps_List.Size = new System.Drawing.Size(171, 474);
-			this.lv_Maps_List.TabIndex = 0;
-			this.lv_Maps_List.UseCompatibleStateImageBehavior = false;
-			this.lv_Maps_List.View = System.Windows.Forms.View.List;
+			this.btn_TS_AddMap.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.btn_TS_AddMap.Image = ((System.Drawing.Image)(resources.GetObject("btn_TS_AddMap.Image")));
+			this.btn_TS_AddMap.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btn_TS_AddMap.Name = "btn_TS_AddMap";
+			this.btn_TS_AddMap.Size = new System.Drawing.Size(23, 22);
+			this.btn_TS_AddMap.Text = "Add Map";
 			// 
-			// ch_Maps_Id
+			// toolStripButton2
 			// 
-			this.ch_Maps_Id.Text = "#";
-			this.ch_Maps_Id.Width = 34;
+			this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+			this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton2.Name = "toolStripButton2";
+			this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton2.Text = "toolStripButton2";
 			// 
-			// ch_Maps_MapName
+			// toolStripButton3
 			// 
-			this.ch_Maps_MapName.Text = "Map";
-			this.ch_Maps_MapName.Width = 133;
+			this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+			this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton3.Name = "toolStripButton3";
+			this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton3.Text = "toolStripButton3";
 			// 
-			// tabPage2
+			// toolStripButton4
 			// 
-			this.tabPage2.Location = new System.Drawing.Point(4, 22);
-			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(830, 509);
-			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "Rooms";
-			this.tabPage2.UseVisualStyleBackColor = true;
+			this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+			this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton4.Name = "toolStripButton4";
+			this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton4.Text = "toolStripButton4";
 			// 
-			// tabPage3
+			// toolStripButton5
 			// 
-			this.tabPage3.Location = new System.Drawing.Point(4, 22);
-			this.tabPage3.Name = "tabPage3";
-			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(830, 509);
-			this.tabPage3.TabIndex = 2;
-			this.tabPage3.Text = "Items";
-			this.tabPage3.UseVisualStyleBackColor = true;
+			this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+			this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton5.Name = "toolStripButton5";
+			this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton5.Text = "toolStripButton5";
 			// 
-			// tabPage5
+			// toolStripButton6
 			// 
-			this.tabPage5.Location = new System.Drawing.Point(4, 22);
-			this.tabPage5.Name = "tabPage5";
-			this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage5.Size = new System.Drawing.Size(830, 509);
-			this.tabPage5.TabIndex = 4;
-			this.tabPage5.Text = "Properties";
-			this.tabPage5.UseVisualStyleBackColor = true;
-			// 
-			// tabPage6
-			// 
-			this.tabPage6.Location = new System.Drawing.Point(4, 22);
-			this.tabPage6.Name = "tabPage6";
-			this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage6.Size = new System.Drawing.Size(830, 509);
-			this.tabPage6.TabIndex = 5;
-			this.tabPage6.Text = "tabPage6";
-			this.tabPage6.UseVisualStyleBackColor = true;
+			this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+			this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton6.Name = "toolStripButton6";
+			this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton6.Text = "toolStripButton6";
 			// 
 			// Form1
 			// 

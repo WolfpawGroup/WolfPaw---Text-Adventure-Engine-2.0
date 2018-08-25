@@ -37,35 +37,40 @@ namespace WolfPaw_Text_Adventure_Engine_2
 		/// Gets Keys and Values from Json String
 		/// </summary>
 		/// <param name="JSON">String containing simple Json data {"":"", "":""}</param>
-		/// <returns>object[] containing object[]-s each of them containing an array of types and the 2 values eg: [Type[]{String,Int},"key":"1"]</returns>
-		public object[] getDataFromJsonString(string JSON)
+		/// <returns>jsonReturn[] containing jsonReturn-s</returns>
+		public jsonReturn[] getDataFromJsonString(string JSON)
 		{
-			List<object> lo = new List<object>();
+			List<jsonReturn> lo = new List<jsonReturn>();
 			string Json = JSON.Trim();
 			if (!Json.StartsWith("{") || !Json.EndsWith("}")) { return null; }
+			Json = Json.Trim('{', '}');
 			if (Json.Contains("\",\"")) { Json = Json.Replace("\",\"", "\", \""); }
 			string[] jsa = Json.Split(new String[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
 
 			Regex r = new Regex("\".*?\":\".*?\"");
-			Regex num = new Regex("^\"\\d+\"$");
+			Regex num = new Regex("^\\d+$");
 
 			foreach (string s in jsa)
 			{
 				string ss = s.Trim();
 				if (r.IsMatch(ss))
 				{
-					object[] o = new object[3];
-					Type[] tt = new Type[2];
+					jsonReturn jr = new jsonReturn();
 					int i = 0;
+
 					foreach (string sss in ss.Split(':'))
 					{
-						if (num.IsMatch(sss)) { tt[i] = 0.GetType(); }
-						else { tt[i] = "".GetType(); }
-						o[i + 1] = sss;
+						string _s_ = sss.Trim('\\', '"');
+						if (num.IsMatch(_s_))	{ if (i == 0) { jr.keyIsInt = true;		}	else { jr.valueIsInt = true;	} }
+						else					{ if (i == 0) { jr.keyIsInt = false;	}	else { jr.valueIsInt = false;	} }
+
+						if(i == 0)	{ jr.Key = _s_; }
+						else		{ jr.Value = _s_; }
+
 						i++;
 					}
-					o[0] = tt;
-					lo.Add(o);
+
+					lo.Add(jr);
 				}
 			}
 
@@ -77,12 +82,55 @@ namespace WolfPaw_Text_Adventure_Engine_2
 	{
 		public dynamic Key { get; set; }
 		public dynamic Value { get; set; }
-		public Type keyType { get; set; } = "".GetType();
-		public Type valueType { get; set; } = "".GetType();
+		public bool keyIsInt { get; set; }
+		public bool valueIsInt { get; set; }
+
+		private int keyAsInt()
+		{
+			string v = Key;
+			//v = v.Trim(new char[] { '\\', '"' });
+			return Convert.ToInt32(v);
+		}
+
+		private string keyAsString()
+		{
+			return Key;
+		}
+
+		private int valueAsInt()
+		{
+			string v = Value;
+			//v = v.Trim(new char[] { '\\', '"' });
+			return Convert.ToInt32(v);
+		}
+
+		private string valueAsString()
+		{
+			return Value;
+		}
 
 		public dynamic key()
 		{
-			return Key;
+			if (keyIsInt)
+			{
+				return keyAsInt();
+			}
+			else
+			{
+				return keyAsString();
+			}
+		}
+
+		public dynamic value()
+		{
+			if (valueIsInt)
+			{
+				return valueAsInt();
+			}
+			else
+			{
+				return valueAsString();
+			}
 		}
 	}
 

@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="c_GenerateId.cs" />
     <Compile Include="c_SimpleJSON.cs" />
     <Compile Include="c_Map.cs" />
     <Compile Include="c_Object.cs" />
