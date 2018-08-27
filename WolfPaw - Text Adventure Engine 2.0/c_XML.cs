@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using System.Xml;
 
 namespace WolfPaw_Text_Adventure_Engine_2
@@ -35,12 +29,7 @@ namespace WolfPaw_Text_Adventure_Engine_2
 				serializer.Serialize(xw, data);
 			}
 			string ret = sb.ToString();
-			Regex rx = new Regex("<PROJECT.*?>");
-			if (rx.IsMatch(ret))
-			{
-				ret = rx.Replace(ret, "<PROJECT>");
-			}
-
+			
 			return ret;
 		}
 	}

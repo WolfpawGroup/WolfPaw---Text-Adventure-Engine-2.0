@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace WolfPaw_Text_Adventure_Engine_2
@@ -63,8 +60,16 @@ namespace WolfPaw_Text_Adventure_Engine_2
 				projectShortDescription = shortDescription,
 				projectDescription = description
 			};
-			
-			File.WriteAllText(projFiles[0], cx.generateXMLDoc(pd));
+
+			string ret = cx.generateXMLDoc(pd);
+
+			Regex rx = new Regex("<PROJECT.*?>");
+			if (rx.IsMatch(ret))
+			{
+				ret = rx.Replace(ret, "<PROJECT>");
+			}
+
+			File.WriteAllText(projFiles[0], ret);
 		}
 	}
 }

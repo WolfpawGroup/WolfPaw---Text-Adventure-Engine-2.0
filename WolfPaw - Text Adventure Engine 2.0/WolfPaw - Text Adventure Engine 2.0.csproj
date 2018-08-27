@@ -63,13 +63,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="c_DataObjects.cs" />
     <Compile Include="c_GenerateId.cs" />
-    <Compile Include="c_Objects.cs" />
+    <Compile Include="types\c_Objects.cs" />
     <Compile Include="c_Project.cs" />
     <Compile Include="c_SimpleJSON.cs" />
-    <Compile Include="c_Map.cs" />
-    <Compile Include="c_Object.cs" />
-    <Compile Include="c_Room.cs" />
+    <Compile Include="c_Directions.cs" />
+    <Compile Include="c_Actions.cs" />
+    <Compile Include="types\c_Map.cs" />
+    <Compile Include="types\c_Openings.cs" />
+    <Compile Include="types\c_Room.cs" />
     <Compile Include="c_WindowHandler.cs" />
     <Compile Include="c_XML.cs" />
     <Compile Include="Form1.cs">
